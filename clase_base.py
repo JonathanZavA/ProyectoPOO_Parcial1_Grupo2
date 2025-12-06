@@ -67,7 +67,7 @@ class ServicioMedico:
     # --- Métodos que serán utilizados para el encapsulamiento ---
 
     def precio_del_servicio(self):
-        """Retorna el precio estándar definido en la constante."""
+        """Retorna el precio estándar definido como constante."""
         return self.precio_estandar
 
     def es_urgente(self):

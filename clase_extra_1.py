@@ -96,6 +96,6 @@ class Paciente:
 
     def __str__(self):
         # Información del paciente
-        return f"Datos del paciente\nNombre: {self._nombre}\nApellido: {self._apellido}\nEdad: {self._edad}\nGénero: {self._genero}\nCorreo: {self._correo}"
+        return f'Datos del paciente\nNombre: {self._nombre}\nApellido: {self._apellido}\nEdad: {self._edad}\nGénero: {self._genero}\nCorreo: {self._correo}'
 
 
