@@ -77,3 +77,6 @@ class ServicioMedico:
 
     def __str__(self):
         return f'Datos del servicio médico del paciente\nFecha: {self.fecha}\nHora: {self.hora}hrs\nPaciente: {self.paciente}'
+
+
+
