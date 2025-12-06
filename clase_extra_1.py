@@ -18,7 +18,7 @@ class Paciente:
             raise ValueError('El apellido no puede estar vacío')
         if not n_nombre.replace(' ','').isalpha():
             raise ValueError('El parámetro no ´puede contener numeros ni carácteres especiales.')
-        self._nombre = n_nombre 
+        self._nombre = n_nombre
 
     # Apellido
     @property
@@ -100,5 +100,3 @@ class Paciente:
         return f"Datos del paciente\nNombre: {self._nombre}\nApellido: {self._apellido}\nEdad: {self._edad}\nGénero: {self._genero}\nCorreo: {self._correo}"
 
 
-paciente1 = Paciente('nombre','apellido',9,'m','jonmat@gmail.com')
-print(paciente1.nombre)
