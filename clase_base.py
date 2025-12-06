@@ -2,8 +2,6 @@ from datetime import datetime
 from clase_extra_1 import Paciente
 
 class ServicioMedico:
-
-
     def __init__(self,fecha, hora, paciente):
         """ Constructor de la clase. Inicializa y valida los datos"""
         # Se define el valor del precio estandar.
@@ -18,12 +16,10 @@ class ServicioMedico:
     def precio_estandar(self):
         return self._precio_estandar
 
-
     @property
     def fecha(self):
         """Getter para obtener la fecha."""
         return self.fecha
-
 
     @fecha.setter
     def fecha(self, n_fecha):
@@ -35,12 +31,10 @@ class ServicioMedico:
             raise ValueError('La fecha debe ser válida y tener el formato DD/MM/AAAA.')
         self._fecha = n_fecha
 
-
     @property
     def hora(self):
         """Getter para obtener la hora."""
         return self._hora
-
 
     @hora.setter
     def hora(self, n_hora):
@@ -52,12 +46,10 @@ class ServicioMedico:
             raise ValueError('La hora debe ser válida y tener formato HH:MM (ej. 14:30).')
         self._hora = n_hora
 
-
     @property
     def paciente(self):
         """Getter para obtener el objeto paciente."""
         return self._paciente
-
 
     @paciente.setter
     def paciente(self, n_paciente):
@@ -66,13 +58,10 @@ class ServicioMedico:
             raise TypeError('Error: El valor no es una instancia de la clase Paciente.')
         self._paciente = n_paciente
 
-
     # Métodos para el encapsulamiento
-
     def precio_del_servicio(self):
         """Retorna el precio estándar definido en la constante."""
         return self.precio_estandar
-
 
     def es_urgente(self):
         """
@@ -80,7 +69,6 @@ class ServicioMedico:
              Por defecto es False en la clase padre.
         """
         return False
-
 
     def __str__(self):
         """Retorna la información del objeto."""

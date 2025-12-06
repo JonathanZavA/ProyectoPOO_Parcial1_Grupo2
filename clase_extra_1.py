@@ -6,7 +6,6 @@ class Paciente:
         self.genero = genero
         self.correo = correo
 
-    # Nombre
     @property
     def nombre(self):
         return self._nombre
@@ -16,8 +15,10 @@ class Paciente:
         n_nombre = ' '.join(str(n_nombre).split())
         if not n_nombre:
             raise ValueError('El apellido no puede estar vacío')
+
         if not n_nombre.replace(' ','').isalpha():
             raise ValueError('El parámetro no ´puede contener numeros ni carácteres especiales.')
+
         self._nombre = n_nombre
 
     # Apellido
@@ -28,10 +29,8 @@ class Paciente:
     @apellido.setter
     def apellido(self, n_apellido):
         n_apellido = ' '.join(str(n_apellido).split())
-
         if not n_apellido:
             raise ValueError('El apellido no puede estar vacío.')
-
         if not n_apellido.replace(' ','').isalpha():
             raise ValueError('El parámetro no puede contener numeros ni carácteres especiales.')
 
@@ -47,10 +46,8 @@ class Paciente:
     @edad.setter
     def edad(self, n_edad):
         str_edad = str(n_edad).replace(' ','')
-
         if str_edad.isdigit():
             n_edad = int(str_edad)
-
             if 0 <= n_edad <= 123:
                 self._edad = n_edad
             else:
@@ -73,7 +70,6 @@ class Paciente:
 
         self._genero = n_genero
 
-
     @property
     def correo(self):
         return self._correo
@@ -81,19 +77,14 @@ class Paciente:
     @correo.setter
     def correo(self, n_correo):
         n_correo = str(n_correo).strip()
-
         if not n_correo or ' ' in n_correo:
             raise ValueError('El correo no puede estar vacío ni contener espacios.')
 
         dividido = n_correo.split('@')
-
         if len(dividido) != 2 or '.' not in dividido[1] or not dividido[0] or not dividido[1]:
             raise ValueError('Formato de correo inválido.')
 
         self._correo = n_correo
-
-
-
 
     def __str__(self):
         # Devuelve los datos en una sola línea limpia
