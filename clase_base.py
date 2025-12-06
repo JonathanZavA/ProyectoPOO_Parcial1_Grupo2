@@ -12,6 +12,10 @@ class ServicioMedico:
         self.hora = hora
         self.paciente = paciente
 
+
+
+    # --- Propertys Setters de todos los atributos ---
+
     @property
     def precio_estandar(self):
         return self._precio_estandar
@@ -58,7 +62,10 @@ class ServicioMedico:
             raise TypeError('Error: El valor no es una instancia de la clase Paciente.')
         self._paciente = n_paciente
 
-    # Métodos para el encapsulamiento
+
+
+    # --- Métodos que serán utilizados para el encapsulamiento ---
+
     def precio_del_servicio(self):
         """Retorna el precio estándar definido en la constante."""
         return self.precio_estandar
@@ -69,6 +76,10 @@ class ServicioMedico:
              Por defecto es False en la clase padre.
         """
         return False
+
+
+
+   # -- str de la instancia --
 
     def __str__(self):
         """Retorna la información del objeto."""
