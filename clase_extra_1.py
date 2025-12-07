@@ -1,4 +1,7 @@
 class Paciente:
+    '''
+             Clase que crea objetos para los datos de un paciente
+    '''
     def __init__(self,nombre,apellido,edad,genero,correo):
         self.nombre = nombre
         self.apellido = apellido
@@ -17,10 +20,10 @@ class Paciente:
         """Valida que el nombre no tenga números ni caracteres especiales."""
         n_nombre = ' '.join(str(n_nombre).split())
         if not n_nombre:
-            raise ValueError('El apellido no puede estar vacío')
+            raise ValueError('El nombre no puede estar vacío')
 
         if not n_nombre.replace(' ','').isalpha():
-            raise ValueError('El parámetro no ´puede contener numeros ni carácteres especiales.')
+            raise ValueError('El nombre no puede tener números ni carácteres especiales.')
 
         self._nombre = n_nombre
 
@@ -35,7 +38,7 @@ class Paciente:
         if not n_apellido:
             raise ValueError('El apellido no puede estar vacío.')
         if not n_apellido.replace(' ','').isalpha():
-            raise ValueError('El parámetro no puede contener numeros ni carácteres especiales.')
+            raise ValueError('El apellido no puede tener numeros ni carácteres especiales.')
 
         self._apellido = n_apellido
 
@@ -54,7 +57,7 @@ class Paciente:
             else:
                 raise ValueError('La edad no está dentro del rango permitido.')
         else:
-            raise ValueError('Error: El numero tiene que ser positivo y unicamente entero, enténtelo de nuevo.')
+            raise ValueError('Error: La edad tiene que ser un numero positivo y unicamente entero, enténtelo de nuevo.')
 
 
 
@@ -69,7 +72,7 @@ class Paciente:
         """Valida que el género sea 'm' o 'f'."""
         n_genero = str(n_genero).lower().strip()
         if n_genero not in ('m', 'f'):
-            raise ValueError('No está dentro de los valores permitidos (m,f)')
+            raise ValueError('El género está dentro de los valores permitidos (m,f)')
 
         self._genero = n_genero
 
@@ -86,7 +89,7 @@ class Paciente:
 
         dividido = n_correo.split('@')
         if len(dividido) != 2 or '.' not in dividido[1] or not dividido[0] or not dividido[1]:
-            raise ValueError('Formato de correo inválido.')
+            raise ValueError('Formato de correo incorrecto.')
 
         self._correo = n_correo
 
@@ -96,6 +99,10 @@ class Paciente:
 
     def __str__(self):
         # Información del paciente
-        return f'Datos del paciente\nNombre: {self._nombre}\nApellido: {self._apellido}\nEdad: {self._edad}\nGénero: {self._genero}\nCorreo: {self._correo}'
+        return f'-- Datos del paciente --\nNombre: {self._nombre}\nApellido: {self._apellido}\nEdad: {self._edad}\nGénero: {self._genero}\nCorreo: {self._correo}'
 
 
+# Muestra de la ejecución de la clase
+if __name__ == '__main__':
+    pac = Paciente('Maria', 'Merc',19,'f','merch@gmail.com')
+    print(pac)

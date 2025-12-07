@@ -2,6 +2,9 @@ from datetime import datetime
 from clase_extra_1 import Paciente
 
 class ServicioMedico:
+    '''
+          Clase que crea objetos para un servivio medico
+     '''
     def __init__(self,fecha, hora, paciente):
         """ Constructor de la clase. Inicializa y valida los datos"""
         # Se define el valor del precio estandar.
@@ -23,7 +26,7 @@ class ServicioMedico:
     @property
     def fecha(self):
         """Getter para obtener la fecha."""
-        return self.fecha
+        return self._fecha
 
     @fecha.setter
     def fecha(self, n_fecha):
@@ -32,7 +35,7 @@ class ServicioMedico:
         try:
             datetime.strptime(n_fecha, '%d/%m/%Y')
         except ValueError:
-            raise ValueError('La fecha debe ser válida y tener el formato DD/MM/AAAA.')
+            raise ValueError('La fecha insrtada es incorrecta, procure seguir el siguiente formato: DD/MM/AAAA.')
         self._fecha = n_fecha
 
     @property
@@ -47,7 +50,7 @@ class ServicioMedico:
         try:
             datetime.strptime(n_hora, '%H:%M')
         except ValueError:
-            raise ValueError('La hora debe ser válida y tener formato HH:MM (ej. 14:30).')
+            raise ValueError('La hora insertada es incorrecta, procure seguir el siguiente formato: HH:MM (ej. 14:30).')
         self._hora = n_hora
 
     @property
@@ -83,7 +86,24 @@ class ServicioMedico:
 
     def __str__(self):
         """Retorna la información del objeto."""
-        return f'Datos del servicio médico del paciente\nFecha: {self.fecha}\nHora: {self.hora}hrs\nPaciente: {self.paciente}'
+        return (f'-- Datos del servicio médico del paciente --\nFecha: {self.fecha}\nHora: {self.hora}hrs\nNombre: {self.paciente.nombre}\nApellido: {self.paciente.apellido}\n'
+                f'Edad: {self.paciente.edad}\nGénero: {self.paciente.genero}\nCorreo: {self.paciente.correo}')
+
+
+# Muestra de la ejecución de la clase
+if __name__ == '__main__':
+    paciente1 = Paciente('Jont','Zav',19,'m','jonat@gmail.com')
+    paciente1_servicioMedico = ServicioMedico('7/12/2025','11:43',paciente1)
+    print(paciente1_servicioMedico)
+    print('\nPrecio del servicio: $',paciente1_servicioMedico.precio_del_servicio())
+    print('Es urgente? ',paciente1_servicioMedico.es_urgente())
+    print('Hora: ',paciente1_servicioMedico.hora,' Fecha: ',paciente1_servicioMedico.fecha)
+
+
+
+
+
+
 
 
 
