@@ -5,8 +5,8 @@ class ConsultaGeneral(ServicioMedico):
     '''
          Clase que crea objetos para ver la especialidad de un servicio medico
     '''
-    def _init_(self, fecha, hora, paciente, especialidad):
-        super()._init_(fecha, hora, paciente)
+    def __init__(self, fecha, hora, paciente, especialidad):
+        super().__init__(fecha, hora, paciente)
         self.especialidad = especialidad
 
         # MUESTRA LOS DATOS DE LA CLASE

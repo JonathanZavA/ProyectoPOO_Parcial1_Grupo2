@@ -86,7 +86,7 @@ class ServicioMedico:
 
     def __str__(self):
         """Retorna la información del objeto."""
-        return (f'-- Datos del servicio médico del paciente --\nFecha: {self.fecha}\nHora: {self.hora}hrs\nNombre: {self.paciente.nombre}\nApellido: {self.paciente.apellido}\n'
+        return (f'- Datos del servicio  -\nFecha: {self.fecha}\nHora: {self.hora}hrs\nNombre: {self.paciente.nombre}\nApellido: {self.paciente.apellido}\n'
                 f'Edad: {self.paciente.edad}\nGénero: {self.paciente.genero}\nCorreo: {self.paciente.correo}')
 
 

@@ -5,8 +5,8 @@ class Urgencia(ServicioMedico):
     '''
          Clase que crea objetos para verificar el tipo de urgencia de un servicio medico
     '''
-    def _init_(self, fecha, hora, paciente, nivel_gravedad):
-        super()._init_(fecha, hora, paciente)
+    def __init__(self, fecha, hora, paciente, nivel_gravedad):
+        super().__init__(fecha, hora, paciente)
         self.nivel_gravedad = nivel_gravedad
 
         #MUESTRA LOS DATOS DE LA CLASE
