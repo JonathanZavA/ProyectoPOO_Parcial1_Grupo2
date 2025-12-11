@@ -1,3 +1,7 @@
+#-Integrantes:
+#-ZAVALA ALCIVAR JONATHAN ISRAEL
+#- REYES OBANDO DANIELA ALEJANDRA
+#- PINTADO CORREA SYLVIA ANGELICA
 from datetime import datetime
 from clase_extra_1 import Paciente
 
