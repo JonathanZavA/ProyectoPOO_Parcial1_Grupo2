@@ -1,3 +1,7 @@
+#-Integrantes:
+#-ZAVALA ALCIVAR JONATHAN ISRAEL
+#- REYES OBANDO DANIELA ALEJANDRA
+#- PINTADO CORREA SYLVIA ANGELICA
 from clase_hija_1 import ConsultaGeneral
 from clase_hija_2 import Urgencia
 from clase_extra_1 import Paciente
