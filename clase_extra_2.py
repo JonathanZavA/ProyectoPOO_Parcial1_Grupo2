@@ -1,3 +1,7 @@
+#-Integrantes:
+#-ZAVALA ALCIVAR JONATHAN ISRAEL
+#- REYES OBANDO DANIELA ALEJANDRA
+#- PINTADO CORREA SYLVIA ANGELICA
 class Gestor:
     def __init__(self):
         # aquí se guardan TODOS los servicios
