@@ -2,12 +2,13 @@ class Paciente:
     '''
              Clase que crea objetos para los datos de un paciente
     '''
-    def __init__(self,nombre,apellido,edad,genero,correo):
+    def __init__(self,nombre,apellido,edad,genero,correo,cedula):
         self.nombre = nombre
         self.apellido = apellido
         self.edad = edad
         self.genero = genero
         self.correo = correo
+        self.cedula = cedula
 
 
     # --- Propertys y Setters de nombre, apellido y edad ---
@@ -92,6 +93,21 @@ class Paciente:
             raise ValueError('Formato de correo incorrecto.')
 
         self._correo = n_correo
+
+
+    @property
+    def cedula(self):
+        return self._cedula
+
+    @cedula.setter
+    def cedula(self,n_cedula):
+        if not n_cedula:
+            raise ValueError('Debe ingresar una cédula.')
+        elif not n_cedula.isdigit():
+            raise ValueError('Solo se permiten números (recuerde que el tamaño máximo son de 10 dígitos correspondiente al formato de una cédula, si no es así, saltará otro error.')
+        elif n_cedula < 0 or n_cedula > 10:
+            raise ValueError('Fuera del rango (10 digitos)')
+        self._cedula = n_cedula
 
 
 
