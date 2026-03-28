@@ -1,3 +1,7 @@
+#-Integrantes:
+#-ZAVALA ALCIVAR JONATHAN ISRAEL
+#- REYES OBANDO DANIELA ALEJANDRA
+#- PINTADO CORREA SYLVIA ANGELICA
 from clase_base import ServicioMedico
 from clase_extra_1 import Paciente
 
