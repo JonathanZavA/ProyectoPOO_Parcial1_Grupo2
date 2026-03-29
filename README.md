@@ -33,5 +33,12 @@ permitiendo que sus constructores muestren los datos automáticamente en la cons
 Finalmente, para unificar y procesar la información, debe instanciar la clase Gestor. Con el objeto gestor inicializado, utilice su método de agregar servicio para incorporar uno a uno los objetos de consulta y urgencia creados previamente. 
 Para concluir la ejecución y obtener el reporte final, invoque los métodos del gestor encargados de clasificar los servicios y calcular el total de gastos, imprimiendo el propio objeto gestor o los retornos de sus funciones para visualizar 
 el resumen estadístico y financiero de todas las atenciones registradas.
+---CAPTURAS DE LA EJECUCIÓN--
+<img width="1919" height="1079" alt="image" src="https://github.com/user-attachments/assets/8475ebc6-1e73-49fe-a8cd-fad2b7e1de1f" />
+
+<img width="1919" height="1079" alt="image" src="https://github.com/user-attachments/assets/b0361b7e-754f-417d-b8d3-1828340cd7b3" />
+
+
+
 
 
