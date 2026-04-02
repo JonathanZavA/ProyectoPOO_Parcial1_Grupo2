@@ -1,3 +1,7 @@
+#-Integrantes:
+#-ZAVALA ALCIVAR JONATHAN ISRAEL
+#- REYES OBANDO DANIELA ALEJANDRA
+#- PINTADO CORREA SYLVIA ANGELICA
 class Paciente:
     '''
              Clase que crea objetos para los datos de un paciente
